@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.game-container1 {
+    min-width: 550px;
+    max-width: 600px;
+}
+
+.game-container2 {
+    min-width: 300px;
+    max-width: 400px;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.game-container1,
+.game-container2 {
+    margin: 20px;
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+
+#pokemon-image {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+#guess-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#submit-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#game-title {
+    font-size: 24px;
+}
+
+.winner-container {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#winner-title {
+    font-size: 24px;
+}
+
+#winner-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    z-index: 100;
+    transition: opacity 0.5s ease;
+}
+
+
+@media screen and (max-width: 950px) {
+    .game-container1 {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .game-container2 {
+        width: 100%;
+        min-width: auto;
+        max-width: 600px;
+    }
+
+    #game-title {
+        font-size: 20px;
+    }
+
+    #winner-title {
+        font-size: 18px;
+    }
+
+}
+
+#name-form {
+    max-width: 400px;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#name-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+
+#name-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#display-name {
+    margin-top: 20px;
+    font-size: 18px;
+}

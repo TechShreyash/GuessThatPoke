@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's That Pokemon</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- To get username -->
+    <div id="name-form">
+        <h2>Enter User Name</h2>
+        <input type="text" id="userNameInput" placeholder="Your Name" required>
+        <button onclick="newUserName()">Submit</button>
+    </div>
+
+    <!-- main game container -->
+    <div id="main-container" class="main-container" style="display: none;">
+
+        <div class="game-container1 game-container">
+            <header>
+                <h1 id="game-title">Who's That Pokemon</h1>
+            </header>
+
+            <img id="pokemon-image" src="" alt="Pokemon Image Loading">
+
+
+            <input type="text" id="guess-input" placeholder="Enter your guess" autocomplete="off" required>
+            <button id="submit-button" onclick="checkGuess()">Submit Guess</button>
+        </div>
+
+
+        <div class="game-container2 game-container">
+            <div id="ranking-board">
+                <h2>Ranking Board</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>UserName</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="winner-screen" style="opacity: 0; display: none;">
+            <div class="winner-container">
+                <h2 id="winner-title"></h2>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Scipts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
