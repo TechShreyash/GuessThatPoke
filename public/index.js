@@ -64,7 +64,6 @@ function checkGuess() {
     const pokemonName = UserInput.value.toLowerCase();
     if (!pokemonName) return;
 
-    console.log(pokemonName);
     UserInput.value = '';
 
     if (pokemonName === CurrentPokemonName) {
@@ -87,14 +86,11 @@ function updateRankings() {
     items.sort(function (first, second) {
         return second[1] - first[1];
     })
-    console.log('Items : ', items);
 
     let html = '';
 
     for (let i = 0; i < Math.min(10, items.length); i++) {
         const user = items[i];
-        console.log('UserPts : ', user);
-
         html += `<tr><td>${i + 1}</td><td>${user[0]}</td><td>${user[1]}</td></tr>`;
     }
 
