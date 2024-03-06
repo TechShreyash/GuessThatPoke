@@ -14,11 +14,12 @@ async function getJson(url) {
 // function to get random pokemon
 async function getRandomPokemon() {
     try {
-        const id = getRandomNumber(TotalPokemons - 1) + 1; // from 1 to 1302
+        const id = getRandomNumber(TotalPokemons - 1) + 1; // from 1 to 1025
         console.log('Random Pokemon ID : ', id);
 
         const pokemonData = await getJson(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        const name = pokemonData.name.toLowerCase();
+        const name = pokemonData.name.toLowerCase().replaceAll('-', ' ');
+
         const image = pokemonData.sprites.other['official-artwork'].front_default;
         return { name, image };
     }

@@ -108,15 +108,19 @@ function startServerConnection(pokemon, userpts) {
     USER_PTS = userpts;
     updateRankings();
 
-    socket.on('change pokemon', (GUESS_DATA, c_pokemon, userpts) => {
+    socket.on('change pokemon', (GUESS_DATA, c_pokemon, userpts, istimeout) => {
         PokemonImage.style.display = 'none';
         winnerScreen.style.display = 'flex';
         winnerScreen.style.opacity = 1;
 
-        if (GUESS_DATA.UserName === UserName) {
-            winnerTitle.innerHTML = `Congratulations! You Guessed Correctly, Pokemon Is ${GUESS_DATA.PokemonName}`;
+        if (istimeout) {
+            winnerTitle.innerHTML = `Timeout! Pokemon Is ${GUESS_DATA.PokemonName}`;
         } else {
-            winnerTitle.innerHTML = `${GUESS_DATA.UserName} Guessed Correctly, Pokemon Is ${GUESS_DATA.PokemonName}`;
+            if (GUESS_DATA.UserName === UserName) {
+                winnerTitle.innerHTML = `Congratulations! You Guessed Correctly, Pokemon Is ${GUESS_DATA.PokemonName}`;
+            } else {
+                winnerTitle.innerHTML = `${GUESS_DATA.UserName} Guessed Correctly, Pokemon Is ${GUESS_DATA.PokemonName}`;
+            }
         }
 
         USER_PTS = userpts;
