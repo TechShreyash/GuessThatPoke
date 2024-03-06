@@ -25,7 +25,7 @@ getRandomPokemon().then((pokemon) => {
 
 
 
-let PokeGuessTimeout = setTimeout(() => {
+let PokeGuessInterval = setInterval(() => {
     getRandomPokemon().then((pokemon2) => {
         console.log('Timeout New Pokemon : ', pokemon2);
         io.emit('change pokemon', { PokemonName: CURRENT_POKEMON.name }, pokemon2, USER_PTS, true);
@@ -33,13 +33,11 @@ let PokeGuessTimeout = setTimeout(() => {
     });
 }, 30000);;
 
-
-
 io.on('connection', (socket) => {
     console.log('New user connected')
 
     socket.on('correct guess', (GUESS_DATA) => {
-        clearTimeout(PokeGuessTimeout);
+        clearInterval(PokeGuessInterval);
         console.log('Correct Guess Made : ', GUESS_DATA);
         USER_PTS[GUESS_DATA.UserName] += 10;
 
@@ -50,7 +48,7 @@ io.on('connection', (socket) => {
             io.emit('change pokemon', GUESS_DATA, CURRENT_POKEMON, USER_PTS, false);
         });
 
-        PokeGuessTimeout = setTimeout(() => {
+        PokeGuessInterval = setInterval(() => {
             getRandomPokemon().then((pokemon2) => {
                 console.log('Timeout New Pokemon : ', pokemon2);
                 io.emit('change pokemon', { PokemonName: CURRENT_POKEMON.name }, pokemon2, USER_PTS, true);
