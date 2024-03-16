@@ -1,3 +1,6 @@
+![image](https://github.com/TechShreyash/GuessThatPoke/assets/82265247/e6529c2c-e462-49aa-832d-deeaab933f19)
+
+
 ## 🔰 Guess That Poke
 
 I've created an exciting new game called **Guess That Poke**! In this multiplayer game, you and your friends can test your Pokémon knowledge by guessing the Pokémon shown on the screen. Here's how it works:
