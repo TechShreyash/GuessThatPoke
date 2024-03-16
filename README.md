@@ -1,10 +1,13 @@
 ## 🔰 Guess That Poke
 
-I made a new game, where you can guess the pokemon shown and get points. 
+I've created an exciting new game called **Guess That Poke**! In this multiplayer game, you and your friends can test your Pokémon knowledge by guessing the Pokémon shown on the screen. Here's how it works:
 
-- It is a multiplayer game, you, your friends or any one with the link can join.
-- For each correct guess you get 10 points.
-- Top 10 players will be shown on the ranking board.
+**1. Join the Game**: Anyone with the link can participate. Gather your friends and challenge each other!
 
-Go try and have fun
-Website : https://guessthatpoke.onrender.com
+**2. Guess Correctly**: When a Pokémon appears, try to identify it. For every correct guess, you'll earn **10 points**.
+
+**3. Top 10 Ranking**: The top 10 players will be displayed on the ranking board. Compete to see who can climb to the top!
+
+Ready to catch 'em all? Visit the game website here: [Guess That Poke](https://guessthatpoke.onrender.com)
+
+Have a blast and may the best Pokémon master win! 🌟🔥👾
