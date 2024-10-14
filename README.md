@@ -45,7 +45,7 @@
 - **Pokémon API:** A custom script (`pokeapi.js`) that fetches random Pokémon data for the game.
 
 ### 🌐 Live Demo:
-Check out the live version of the game here: [Guess That Poke](https://guessthatpoke-ux67.onrender.com)
+Check out the live version of the game here: [Guess That Poke](https://guessthatpoke-9voo.onrender.com)
 
 #### ⚠️ Warning:
 This live demo is hosted on **Render.com**, a free hosting platform. The website may experience interruptions due to the following:
